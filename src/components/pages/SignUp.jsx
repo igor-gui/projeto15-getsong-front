@@ -1,6 +1,6 @@
 import handleSubmit from "../../handleSubmit"
 import formGenerator from "../formGenerator"
-import AuthStyle from "../styles/AuthStyle"
+import AuthStyle from "../styles/AuthFormStyle"
 import guitar from '../../assets/images/guitar.jpg'
 import { useNavigate } from "react-router-dom"
 
