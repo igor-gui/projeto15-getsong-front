@@ -1,10 +1,8 @@
 import styled from "styled-components"
-import Products from "../ListProducts"
-import Product from "../Product"
 
-export default function Home() {
+export default function Finished() {
     return (
-        <ScreenHome>
+        <ScreenFinished>
             <Header>
                 <Logo>
                     <h1>GetSong</h1>
@@ -13,40 +11,33 @@ export default function Home() {
                 </Logo>
                 <img src="img/macaco.png"></img>
                 <Options>
-                    <p>Meus pedidos</p>
+                    <p>Produtos</p>
                     <ion-icon name="document-text-outline"></ion-icon>
                     <p>Sair</p>
                     <ion-icon name="exit-outline"></ion-icon>
                 </Options>
             </Header>
+            <h2>Seus pedidos :</h2>
             <List>
-            {Products.map((i) => (
-                <Product
-                image={i.image}
-                name={i.name}
-                value={i.value}
-                />
-            ))}
             </List>
-            <Cart>
-                <ion-icon name="cart"></ion-icon>
-                <p>Seu carrinho :</p>
-                <Purchasing></Purchasing>
-                <Finish>
-                    <p>Finalizar e comprar</p>
-                </Finish>
-            </Cart>
-        </ScreenHome>
+        </ScreenFinished>
     )
 }
-const ScreenHome = styled.div`
-width: 100%;
+const ScreenFinished = styled.div`
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
 width: 100%;
-background-color: #33003D
+background-color: #33003D;
+h2{
+    margin-top: 80px;
+    letter-spacing: 2px;
+    font-size: 28px;
+    font-family: 'Raleway', sans-serif;
+    color: white; 
+    margin-right: 950px;
+}
 `
 const Header = styled.div`
 width: 100%;
@@ -101,48 +92,11 @@ ion-icon{
 }
 `
 const List = styled.div`
-width: 1600px;
-display: flex;
-flex-wrap: wrap;
-`
-const Cart = styled.div`
-width: 100%;
-height: 180px;
-margin-top: 40px;
-background-color: #110014;
-border-top: 2px solid #240702;
-display: flex;
-align-items: center;
-p{
-    font-size: 40px;
-    font-family: 'Raleway', sans-serif;
-    color: white;
-}
-ion-icon{
-    color: white;
-    font-size: 50px;
-    margin-left: 50px;
-    margin-right: 20px;
-}
-`
-const Purchasing = styled.div`
-    width: 900px;
-    height: 120px;
-    background-color: #ffffff9d;
+    margin-top: 50px;
+    width: 1200px;
+    height: 600px;
+    background-color: #d5a2df;
+    margin-bottom: 100px;
+    border: 2px solid #240702;
     border-radius: 12px;
-    margin-left: 100px;
-`
-const Finish = styled.div`
-    width: 220px;
-    height: 80px;
-    background-color: #005a00c7;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px;
-    margin-left: 100px;
-    p{
-        font-size: 20px;
-        color: white;
-    }
 `
