@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import forms from "../forms.js";
+import { AuthContextProvider } from "./contexts/AuthContext.jsx";
 import Header from "./Header";
 import Finished from "./pages/Finished.jsx";
 import Home from "./pages/Home";
@@ -10,8 +11,9 @@ import GlobalStyle from "./styles/GlobalStyle.jsx";
 export default function App() {
     const { signIn, signUp } = forms;
 
+
     return (
-        <>
+        <AuthContextProvider>
             <Header />
             <GlobalStyle />
             <BrowserRouter>
@@ -22,6 +24,6 @@ export default function App() {
                     <Route path="/finished" element={<Finished />} />
                 </Routes>
             </BrowserRouter>
-        </>
+        </AuthContextProvider>
     )
 }
