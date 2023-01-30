@@ -13,6 +13,7 @@ const AuthStyle = styled.form`
     width: 30%;
     min-width: 400px;
     margin-top: 80px;
+    margin-left: 30%;
     border-radius: 5% 40% 50% 70%;
     box-shadow: 5px 16px 2px 1px rgba(0, 0, 0, 0.2);
     min-height: 450px;
@@ -25,6 +26,8 @@ const AuthStyle = styled.form`
         padding-left: 10px;
         border-radius: 5px;
         border: 0;
+        font-family: 'Raleway';
+        font-size: 16px;
         ::placeholder{
             opacity: 0.7;
         }
@@ -36,7 +39,12 @@ const AuthStyle = styled.form`
         border-radius: 5px;
         max-width: 135px;
         min-width: max-content;
-        background-color: #216097;
+        background-color: #7d7162;
+
+        color: #4b3f31;
+        font-family: 'Raleway';
+        font-size: 16px;
+
     }
 `
 export default AuthStyle;

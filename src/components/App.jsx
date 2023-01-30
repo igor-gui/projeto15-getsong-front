@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import forms from "../forms.js";
+import { AuthContextProvider } from "./contexts/AuthContext.jsx";
 import Header from "./Header";
 import Home from "./pages/Home";
 import SignIn from "./pages/SignIn";
@@ -11,7 +12,7 @@ export default function App() {
 
 
     return (
-        <>
+        <AuthContextProvider>
             <Header />
             <GlobalStyle />
             <BrowserRouter>
@@ -21,6 +22,6 @@ export default function App() {
                     <Route path="/sign-up" element={<SignUp form={signUp} />} />
                 </Routes>
             </BrowserRouter>
-        </>
+        </AuthContextProvider>
     )
 }
